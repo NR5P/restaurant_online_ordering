@@ -1,0 +1,44 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<div class="dark-overlay-full overflow">
+    <main class="container">
+        <form method="POST" id="form">
+            {{ form.hidden_tag() }}
+            <div class=form-item>
+                {{ form.firstName.label }} {{ form.firstName() }}
+            </div>
+            <div class="form-item">
+                {{ form.lastName.label }} {{ form.lastName() }}
+            </div>
+            <div class="form-item">
+                {{ form.email.label }} {{ form.email() }}
+            </div>
+            <div class="form-item">
+                {{ form.password.label }} {{ form.password() }}
+            </div>
+            <div class="form-item">
+                {{ form.password2.label }} {{ form.password2() }}
+            </div>
+            <div class="form-item">
+                {{ form.address.label }} {{ form.address() }}
+            </div>
+            <div class="form-item">
+                {{ form.city.label }} {{ form.city() }}
+            </div>
+            <div class="form-item">
+                {{ form.state.label }} {{ form.state() }}
+            </div>
+            <div class="form-item">
+                {{ form.zipCode.label }} {{ form.zipCode() }}
+            </div>
+            <div class="form-item">
+                {{ form.phoneNumber.label }} {{ form.phoneNumber() }}
+            </div>
+            <div class="form-item">
+                {{ form.submit(class="submit-button") }}
+            </div>
+        </form>
+    </main>
+</div>
+{% endblock %}
